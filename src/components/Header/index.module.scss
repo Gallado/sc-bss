@@ -1,0 +1,99 @@
+.headerLayout-content{
+  width: 100%;
+  height: 52px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #284984;
+  box-shadow: 1px 1px 6px 0px #B7D4FF;
+  .platform-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    padding-left: 15px;
+    .platform-logo{
+
+    }
+    .platform-logo{
+      background-image: url("../../assets/image/logo.png");
+      width: 36px;
+      height: 31px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 10px;
+    }
+    .platform-Name{
+      font-size: 20px;
+      font-weight: 400;
+      color: #FFFFFF;
+
+    }
+
+  }
+  .header-nav{
+    height: 100%;
+    display: flex;
+    flex: 1;
+    padding: 0 15px;
+    color: #ffffff;
+    ul{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      flex: 1;
+      justify-content: flex-end;
+      li{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 15px;
+        cursor: pointer;
+        font-weight: 500;
+        color: hsla(0,0%,100%,.5);
+        height: 100%;
+        .nav-icon{
+
+        }
+        .nav-name{
+          padding-left: 5px;
+
+
+        }
+      }
+      li:hover{
+        font-weight: 500;
+        color: hsla(0,0%,100%,1);
+      }
+      .activedNav-li{
+        font-weight: 500;
+        color: hsla(0,0%,100%,1);
+      }
+    }
+
+  }
+
+  .loginOut-content{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    height: 100%;
+    padding: 0 15px;
+    color: #ffffff;
+    .login-out{
+      padding-left: 10px;
+    }
+
+
+
+  }
+
+
+
+}
+
+

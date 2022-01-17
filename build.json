@@ -1,0 +1,45 @@
+{
+  //"vite": true,
+  "plugins": [
+    [
+      "build-plugin-moment-locales",
+      {
+        "locales": [
+          "zh-cn"
+        ]
+      }
+    ],
+    [
+    "build-plugin-antd",
+    {
+      "themeConfig": {
+        "primary-color": "#7486D9",
+        "table-header-bg": "#F0F2F5",
+        "table-header-color":"#333333",
+        "table-selected-row-bg":"#F5F7FB",
+        "table-row-hover-bg":"#EFF3FF",
+        "btn-height-base":"30px",
+        "table-font-size":"12px",
+        "menu-highlight-color":"#7486D9",
+        "modal-mask-bg":"rgba(0,0,0,.2)"
+      }
+    }
+   ]
+  ],
+  "proxy": {
+    "/api/": {
+      "target": "http://172.20.25.38:20111",//统一走12306的地址
+      "enable":true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    },
+    "/iam/": {
+      "target": "http://172.20.25.38:20219",//统一走12306的地址
+      "enable":true,
+      "pathRewrite": {
+        "^/iam": ""
+      }
+    }
+  }
+}

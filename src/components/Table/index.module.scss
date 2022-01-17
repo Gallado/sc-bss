@@ -1,0 +1,24 @@
+.table-content{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  #tableComponent{
+    width: 100%;
+    height: 100%;
+  }
+  /*.table-compontent{
+    flex: 1;
+    overflow: hidden;
+
+  }*/
+
+}
+
+.pagination-content{
+  text-align: right;
+  padding: 18px !important;
+  position: relative;
+}
+

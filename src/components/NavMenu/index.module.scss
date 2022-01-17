@@ -1,0 +1,24 @@
+.layoutFlexCol{
+  display: flex;
+  flex-direction: column;
+}
+.layoutFlexRow{
+  display: flex;
+  flex-direction: row;
+}
+.navMenuContent{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  background: #ffffff;
+  .nav-title{
+    font-weight: 500;
+    color: #333333;
+    font-size: 14px;
+    height: 60px;
+    line-height: 60px;
+    padding:0 20px;
+    border-bottom: 2px solid  rgba(233,237,249,0.58);
+  }
+}

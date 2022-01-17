@@ -1,0 +1,26 @@
+.pageTitle-content{
+  width: 100%;
+  height: 50px;
+  min-height:50px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+
+  .title-name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .title-name:before{
+    content: ' ';
+    width: 3px;
+    height: 20px;
+    background-color: #3C67B8;
+    margin-right: 5px;
+
+  }
+
+}
+
+
+

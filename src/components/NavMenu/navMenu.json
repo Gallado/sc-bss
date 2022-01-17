@@ -1,0 +1,169 @@
+{
+  "summary":[],
+  "freeManage":[
+    {
+      "children": [],
+      "id":"1",
+      "key":"/freeSummary",
+      "menuHref": "freeSummary",
+      "menuName": "费用管理概览"
+    },
+    {
+    "children": [
+      {
+        "children": [],
+        "id":"2-1",
+        "key":"/iaasOrder",
+        "menuHref": "iaasOrder",
+        "menuName": "IaaS订单"
+      },{
+        "children": [],
+        "id":"2-2",
+        "key":"/paasOrder",
+        "menuHref": "paasOrder",
+        "menuName": "PaaS订单"
+      },{
+        "children": [],
+        "id":"2-3",
+        "key":"/saasOrder",
+        "menuHref": "saasOrder",
+        "menuName": "SaaS订单"
+      },{
+        "children": [],
+        "id":"2-4",
+        "key":"/serverOrder",
+        "menuHref": "serverOrder",
+        "menuName": "服务订单"
+      }],
+      "id":"2",
+      "key":"/orderManage",
+      "menuHref": "",
+      "menuName": "订单管理"
+    },
+    {
+      "children": [],
+      "id":"3",
+      "key":"/bookKeeping",
+      "menuHref": "bookKeeping",
+      "menuName": "记账"
+    }
+  ],
+
+  "tenantManage":[
+    {
+      "children": [],
+      "id":"1",
+      "key":"/tenant",
+      "menuHref": "tenant",
+      "menuName": "租户列表"
+    }
+  ],
+
+  "productManage":[
+    {
+      "children": [{
+        "children": [],
+        "id":"1-1",
+        "key":"/connect",
+        "menuHref": "connect",
+        "menuName": "大连接"
+      },{
+        "children": [],
+        "id":"1-2",
+        "key":"/computer",
+        "menuHref": "computer",
+        "menuName": "大计算"
+      },{
+        "children": [],
+        "id":"1-3",
+        "key":"/dataBase",
+        "menuHref": "dataBase",
+        "menuName": "大数据"
+      }],
+      "id":"1",
+      "key":"/scPlan",
+      "menuHref": "",
+      "menuName": "臻选场景方案"
+    },{
+      "children": [],
+      "id":"2",
+      "key":"/featuredScenarios",
+      "menuHref": "featuredScenarios",
+      "menuName": "特色场景方案"
+    },{
+      "children": [],
+      "id":"3",
+      "key":"/serviceProviderManage",
+      "menuHref": "serviceProviderManage",
+      "menuName": "服务商管理"
+    }
+  ],
+
+  "orderManage":[
+    {
+      "children": [],
+      "id":"1",
+      "key":"/order",
+      "menuHref": "order",
+      "menuName": "全部工单"
+    },{
+      "children": [],
+      "id":"2",
+      "key":"/productReleaseOrder",
+      "menuHref": "productReleaseOrder",
+      "menuName": "产品发布工单"
+    },{
+      "children": [],
+      "id":"3",
+      "key":"/techSupportOrder",
+      "menuHref": "techSupportOrder",
+      "menuName": "技术支持工单"
+    }
+  ],
+  "messageManage":[
+    {
+      "children": [],
+      "id":"1",
+      "key":"/innerMessage",
+      "menuHref": "innerMessage",
+      "menuName": "站内信息"
+    }
+  ],
+  "adminCenter":[
+    {
+      "children": [],
+      "id":"1",
+      "key":"/organManage",
+      "menuHref": "organManage",
+      "menuName": "组织机构管理"
+    },
+    {
+      "children": [],
+      "id":"2",
+      "key":"/userManage",
+      "menuHref": "userManage",
+      "menuName": "人员管理"
+    },
+    {
+      "children": [],
+      "id":"3",
+      "key":"/roleManage",
+      "menuHref": "roleManage",
+      "menuName": "角色管理"
+    },
+    {
+      "children": [],
+      "id":"4",
+      "key":"/personCenter",
+      "menuHref": "personCenter",
+      "menuName": "个人中心"
+    },
+    {
+      "children": [],
+      "id":"5",
+      "key":"/processConfig",
+      "menuHref": "processConfig",
+      "menuName": "流程设置"
+    }
+  ]
+}
