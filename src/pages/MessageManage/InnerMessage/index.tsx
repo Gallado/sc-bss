@@ -39,7 +39,7 @@ export default class InnerMessage extends Component {
           <TabPane tab="站内信" key="message">
             Content of card tab 2
           </TabPane>
-          <TabPane tab="新闻" key="news">
+          <TabPane tab="新闻111" key="news">
             Content of card tab 3
           </TabPane>
           <TabPane tab="广告" key="adv">
