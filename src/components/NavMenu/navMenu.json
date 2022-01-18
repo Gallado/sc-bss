@@ -79,6 +79,18 @@
         "key":"/dataBase",
         "menuHref": "dataBase",
         "menuName": "大数据"
+      },{
+        "children": [],
+        "id":"1-4",
+        "key":"/security",
+        "menuHref": "security",
+        "menuName": "大安全"
+      },{
+        "children": [],
+        "id":"1-5",
+        "key":"/applicate",
+        "menuHref": "applicate",
+        "menuName": "大应用"
       }],
       "id":"1",
       "key":"/scPlan",
@@ -93,6 +105,12 @@
     },{
       "children": [],
       "id":"3",
+      "key":"/specialScenarios",
+      "menuHref": "specialScenarios",
+      "menuName": "专属场景方案"
+    },{
+      "children": [],
+      "id":"4",
       "key":"/serviceProviderManage",
       "menuHref": "serviceProviderManage",
       "menuName": "服务商管理"

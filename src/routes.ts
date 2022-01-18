@@ -10,7 +10,10 @@ import Tenant from '@/pages/TenantManage/Tenant';
 import Connect from '@/pages/ProductManage/SCPlan/Connect';
 import Computer from '@/pages/ProductManage/SCPlan/Computer';
 import DataBase from '@/pages/ProductManage/SCPlan/DataBase';
+import Security from '@/pages/ProductManage/SCPlan/Security';
+import Applicate from '@/pages/ProductManage/SCPlan/Applicate';
 import FeaturedScenarios from '@/pages/ProductManage/FeaturedScenarios';
+import SpecialScenarios from '@/pages/ProductManage/SpecialScenarios';
 import ServiceProviderManage from '@/pages/ProductManage/ServiceProviderManage';
 
 
@@ -54,11 +57,20 @@ const routerConfig: IRouterConfig[] = [
       path: 'dataBase',
       component: DataBase,
     },{
+      path: 'security',
+      component: Security,
+    },{
+      path: 'applicate',
+      component: Applicate,
+    },{
       path: '/featuredScenarios',
       component: FeaturedScenarios,
     },{
       path: '/serviceProviderManage',
       component: ServiceProviderManage,
+    },{
+      path: '/specialScenarios',
+      component: SpecialScenarios,
     },{
       path: '/tenant',
       component: Tenant,

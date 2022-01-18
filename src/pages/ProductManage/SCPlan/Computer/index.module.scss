@@ -1,3 +1,49 @@
-.computer-content{
+.compute-content{
+  width: 100%;
 
+  .main_content{
+    border:1px solid lightgray;
+    height: 95%;
+  }
+
+  .icon_content{
+    font-size: 80px;
+  }
 }
+
+.distribute-content{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 15px;
+
+  .overview{
+    display: flex;
+    flex:1;
+    section{
+      display: flex;
+      flex-direction: column;
+      flex:0.25;
+      text-align: center;
+    }
+
+    .overview_num{
+      font-size: 20px;
+      font-weight: bolder;
+    }
+
+  }
+
+  .fun_btn{
+    margin-bottom: 10px;
+    Button{
+      margin-right: 5px;
+    }
+  }
+
+  .table_content{
+    background-color:#fff ;
+    padding: 5px;
+  }
+}
+
