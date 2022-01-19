@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Button, Form, Input, Checkbox, message, Modal, Tabs} from 'antd';
+import { history } from 'ice';
 import styles from '../../index.module.scss';
 import {BarcodeOutlined, SplitCellsOutlined, ReconciliationOutlined, QrcodeOutlined} from '@ant-design/icons';
 import Application from '../Application';
@@ -52,7 +53,7 @@ export default class Connect extends Component {
         <div className={styles.table_content}>
           <Tabs defaultActiveKey={this.state.activedSubTabsKey} type="card" onChange={this.subTabPaneChange}>
             <TabPane tab="应用" key="application">
-              <Application></Application>
+              <Application history={this.props.history}></Application>
             </TabPane>
             <TabPane tab="平台" key="platform">
               <Platform></Platform>

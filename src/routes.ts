@@ -24,6 +24,7 @@ import freeManageRouters from "@/config/routers/freeManageRouters";
 
 import NotFoundRoute from '@/components/NotFound';
 import InnerMessage from "@/pages/MessageManage/InnerMessage";
+import ApplicationDetail from "@/pages/ProductManage/SCPlan/Computer/component/ApplicationDetail"
 
 const routerConfig: IRouterConfig[] = [
   {
@@ -63,6 +64,9 @@ const routerConfig: IRouterConfig[] = [
       path: 'applicate',
       component: Applicate,
     },{
+      path:'/ApplicationDetail',
+      component: ApplicationDetail,
+    },{
       path: '/featuredScenarios',
       component: FeaturedScenarios,
     },{
@@ -88,6 +92,7 @@ const routerConfig: IRouterConfig[] = [
     ],
 
   },
+
   {
     path: '*',
     component: NotFoundRoute,

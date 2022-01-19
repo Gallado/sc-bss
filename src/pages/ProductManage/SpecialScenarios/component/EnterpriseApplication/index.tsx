@@ -7,7 +7,7 @@ import styles from '../../index.module.scss';
 
 
 
-export default class Applicatin extends Component {
+export default class EnterpriseApplication extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,7 +34,7 @@ export default class Applicatin extends Component {
         return (
           <Tooltip title={row.appicationName}>
             <a onClick={ () => this.goDetail(text,row) }>
-                <p>{row.appicationName}</p>
+              <p>{row.appicationName}</p>
             </a>
           </Tooltip>
         )
@@ -53,8 +53,8 @@ export default class Applicatin extends Component {
       dataIndex: 'publishPlatform',
     },
     {
-      title: '所属行业',
-      dataIndex: 'occupation',
+      title: '所属场景',
+      dataIndex: 'ownScenarios',
     },
     {
       title: '状态',
@@ -83,80 +83,80 @@ export default class Applicatin extends Component {
   tableData = [
     {
       key: 1,
-      appicationName: '小鱼易连',
+      appicationName: '云监控',
       appicationId: '1001',
       serviceOragen: '联通云',
       publishPlatform: '上海市场景云',
-      occupation:'智慧城市',
+      ownScenarios:'混合云',
       status:'已上架',
       changeTime:'2022-01-01 00:00:00'
     },
     {
       key: 2,
-      appicationName: '网咖云',
+      appicationName: '智慧应急应用平台',
       appicationId: '1000',
       serviceOragen: '联通云',
       publishPlatform: '上海市场景云',
-      occupation:'智慧城市',
+      ownScenarios:'智能视频云',
       status:'已上架',
       changeTime:'2022-01-01 00:00:00'
     },
     {
       key: 3,
-      appicationName: '好视通',
+      appicationName: '联通数字乡村',
       appicationId: '1003',
       serviceOragen: '联通云',
       publishPlatform: '上海工业互联网',
-      occupation:'工业互联网',
+      ownScenarios:'自主可控云',
       status:'已下架',
       changeTime:'2022-01-01 00:00:00',
     },
     {
       key: 4,
-      appicationName: '好视通',
-      appicationId: '1003',
+      appicationName: '智慧消防可视化大屏',
+      appicationId: '1004',
       serviceOragen: '联通云',
       publishPlatform: '上海工业互联网',
-      occupation:'工业互联网',
+      ownScenarios:'自主可控云',
       status:'已下架',
       changeTime:'2022-01-01 00:00:00',
     },
     {
       key: 5,
-      appicationName: '好视通',
-      appicationId: '1003',
+      appicationName: '智慧消防可视化大屏',
+      appicationId: '1005',
       serviceOragen: '联通云',
       publishPlatform: '上海工业互联网',
-      occupation:'工业互联网',
+      ownScenarios:'自主可控云',
       status:'已下架',
       changeTime:'2022-01-01 00:00:00',
     },
     {
       key: 6,
-      appicationName: '好视通',
-      appicationId: '1003',
+      appicationName: '智慧消防可视化大屏',
+      appicationId: '1006',
       serviceOragen: '联通云',
       publishPlatform: '上海工业互联网',
-      occupation:'工业互联网',
+      ownScenarios:'自主可控云',
       status:'已下架',
       changeTime:'2022-01-01 00:00:00',
     },
     {
       key: 7,
-      appicationName: '好视通',
-      appicationId: '1003',
+      appicationName: '智慧消防可视化大屏',
+      appicationId: '1007',
       serviceOragen: '联通云',
       publishPlatform: '上海工业互联网',
-      occupation:'工业互联网',
+      ownScenarios:'自主可控云',
       status:'已下架',
       changeTime:'2022-01-01 00:00:00',
     },{
       key: 8,
-      appicationName: '好视通',
-      appicationId: '1003',
+      appicationName: '智慧消防可视化大屏',
+      appicationId: '1008',
       serviceOragen: '联通云',
       publishPlatform: '上海工业互联网',
-      occupation:'工业互联网',
+      ownScenarios:'自主可控云',
       status:'已下架',
       changeTime:'2022-01-01 00:00:00',
     },
@@ -197,7 +197,7 @@ export default class Applicatin extends Component {
     };
 
     return (
-      <div className={styles['applicaton-content']}>
+      <div className={styles['enterprise-content']}>
         <div className={styles.fun_btn}>
           <Button onClick={this.refresh}><SyncOutlined /></Button>
           <Button onClick={this.batchPutOn}>上架</Button>
@@ -208,7 +208,7 @@ export default class Applicatin extends Component {
             rowSelection={rowSelection}
             columns={this.application_columns}
             dataSource={this.tableData}
-            scroll={{ y: 240 }}
+            scroll={{ y: 700 }}
             bordered
           />
         </div>

@@ -47,3 +47,56 @@
   }
 }
 
+.detailInfo{
+  .detail_title{
+    margin-bottom: 10px;
+    .backBtn{
+      margin-right: 8px;
+    }
+  }
+
+  .detail_content{
+    padding:15px;
+  }
+
+}
+
+
+.baseInfo-content{
+  overflow-y: auto;
+  .base_info{
+    display: flex;
+
+
+  }
+
+  span{
+    min-width: 100px;
+  }
+
+  .show_image{
+    display: flex;
+    margin-bottom: 10px;
+    img{
+      width:200px;
+      margin-right: 10px;
+    }
+    .show_apply_img{
+      display: flex;
+      flex: 1;
+      flex-wrap: wrap;
+
+      img{
+        display: flex;
+        flex-direction: row;
+        width: 32%;
+        margin-right: 10px;
+        margin-bottom: 20px;
+      }
+    }
+
+
+  }
+
+}
+
