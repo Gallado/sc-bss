@@ -4,6 +4,7 @@ import { history } from 'ice';
 import {Button,Table,Tooltip} from 'antd';
 import { SyncOutlined } from '@ant-design/icons';
 import styles from '../../index.module.scss';
+import style from '@/pages/ProductManage/index.module.scss'
 
 
 
@@ -200,8 +201,8 @@ export default class Applicatin extends Component {
       <div className={styles['applicaton-content']}>
         <div className={styles.fun_btn}>
           <Button onClick={this.refresh}><SyncOutlined /></Button>
-          <Button onClick={this.batchPutOn}>上架</Button>
-          <Button onClick={this.batchPutOff}>下架</Button>
+          <Button onClick={this.batchPutOn} className={style.operBtn}>上架</Button>
+          <Button onClick={this.batchPutOff} className={style.operBtn}>下架</Button>
         </div>
         <div>
           <Table

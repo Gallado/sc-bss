@@ -73,7 +73,7 @@ export default class ServiceProviderManage extends Component {
             style={{color: "#6B80DF",marginRight:'10px'}}
             onClick={this.edit.bind(this, record)}>修改</a>
           <a
-            style={{color: "#6B80DF"}}
+            style={{color: "#6B80DF",marginRight:'10px'}}
             onClick={this.callOff.bind(this, record)}>停用</a>
           <a
             style={{color: "#6B80DF"}}
@@ -179,7 +179,7 @@ export default class ServiceProviderManage extends Component {
     };
     return (
       <div className={styles['serviceProviderManage-content']}>
-        <PageTitle title="特色场景管理"/>
+        <PageTitle title="服务商列表"/>
         <div>
           <Button className={styles.operBtn} onClick={this.addServiceProviderAccount}>新增服务商账号</Button>
           <Table

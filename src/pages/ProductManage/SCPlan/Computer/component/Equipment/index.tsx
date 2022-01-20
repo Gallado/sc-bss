@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {Button, Form, Input, Checkbox, message, Modal,Table} from 'antd';
 import { SyncOutlined } from '@ant-design/icons';
 import styles from '../../index.module.scss';
-
+import style from '@/pages/ProductManage/index.module.scss'
 
 
 export default class Equipment extends Component {
@@ -101,8 +101,8 @@ export default class Equipment extends Component {
       <div className={styles['applicaton-content']}>
         <div className={styles.fun_btn}>
           <Button onClick={this.refresh}><SyncOutlined /></Button>
-          <Button onClick={this.batchPutOn}>上架</Button>
-          <Button onClick={this.batchPutOff}>下架</Button>
+          <Button onClick={this.batchPutOn} className={style.operBtn}>上架</Button>
+          <Button onClick={this.batchPutOff} className={style.operBtn}>下架</Button>
         </div>
         <Table
           columns={this.equipment_columns}

@@ -30,7 +30,7 @@ export default class Connect extends Component {
           <div className={styles.overview}>
             <section>
               <div className={styles.icon_content}><SplitCellsOutlined/></div>
-              <p>应用</p>
+              <p className={styles.icon_content_title}>应用</p>
               <p>已上架/总数 <span className={styles.overview_num}>20/50</span></p>
             </section>
             <section>
