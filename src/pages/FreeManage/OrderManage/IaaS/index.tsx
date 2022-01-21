@@ -1,13 +1,15 @@
 
 import React, {Component} from 'react';
 import { history } from 'ice';
-import {Button, Form, Input, Select, message, Modal} from 'antd';
+import {Button, Form, Input, Select, message, Modal,DatePicker} from 'antd';
 const { Option } = Select;
 import { SearchOutlined } from '@ant-design/icons';
 import styles from './index.module.scss';
 
 import PageTitle from '@/components/PageTitle';
 import SCTable from '@/components/Table';
+
+const {RangePicker} = DatePicker;
 
 export default class IaasOrder extends Component {
   constructor(props) {
@@ -38,15 +40,21 @@ export default class IaasOrder extends Component {
       ellipsis: true,
     },
     {
+      title: '用户账号',
+      dataIndex: 'userAccount',
+      key: 'userAccount',
+      ellipsis: true,
+    },
+    {
       title: '租户账号',
       dataIndex: 'tenantId',
       key: 'tenantId',
       ellipsis: true,
     },
     {
-      title: '机构名称',
-      dataIndex: 'organName',
-      key: 'organName',
+      title: '租户名称',
+      dataIndex: 'tenantName',
+      key: 'tenantName',
       ellipsis: true,
     },
     {
@@ -60,6 +68,17 @@ export default class IaasOrder extends Component {
       dataIndex: 'scType',
       key: 'scType',
       ellipsis: true,
+      filters: [
+        {
+          text: '物联感知云',
+          value: '物联感知云',
+        },
+        {
+          text: '5G边缘云',
+          value: '5G边缘云',
+        },
+      ],
+      onFilter: (value, record) => record.scType.indexOf(value) === 0,
     },
     {
       title: '创建时间',
@@ -91,8 +110,28 @@ export default class IaasOrder extends Component {
       key: 'chargeType',
       ellipsis: true,
     },
+    {
+      title: '订单详情',
+      dataIndex: 'detail',
+      render: (text, record) => (
+        <div>
+          <a
+            style={{color: "#6B80DF",marginRight:'10px'}}
+            onClick={this.detail.bind(this, record)}>详情</a>
+        </div>
+      ),
+    },
 
   ];
+
+  detail = (record)=>{
+    history.push({
+      pathname: '/IaasDetail',
+      state: {
+        params: record
+      }
+    })
+  };
 
   query = (pageNum,pageSize) =>{
 
@@ -105,10 +144,35 @@ export default class IaasOrder extends Component {
     setTimeout(()=>{
       let data = [{
         "orderId":"111",
+        "userAccount":"李xx",
         "tenantId":"abc",
-        "organName":"A公司",
+        "tenantName":"A公司",
         "productName":"云服务器 ECS",
-        "scType":"混合云",
+        "scType":"物联感知云",
+        "createTime":"2019-08-01 20:46:25",
+        "status":"成功",
+        "orderType":"新购",
+        "payMoney":"59.80",
+        "chargeType":"包年包月",
+      },{
+        "orderId":"111",
+        "userAccount":"李xx",
+        "tenantId":"abc",
+        "tenantName":"A公司",
+        "productName":"云服务器 ECS",
+        "scType":"物联感知云",
+        "createTime":"2019-08-01 20:46:25",
+        "status":"成功",
+        "orderType":"新购",
+        "payMoney":"59.80",
+        "chargeType":"包年包月",
+      },{
+        "orderId":"111",
+        "userAccount":"李xx",
+        "tenantId":"abc",
+        "tenantName":"A公司",
+        "productName":"云服务器 ECS",
+        "scType":"5G边缘云",
         "createTime":"2019-08-01 20:46:25",
         "status":"成功",
         "orderType":"新购",
@@ -130,12 +194,16 @@ export default class IaasOrder extends Component {
     this.setState({selectRow:row})
   };
 
+  productChange = (item)=>{
+    console.log(item)
+  };
+
 
 
   render() {
     const layout = {
-      labelCol: { span: 8 },
-      wrapperCol: { span: 16 },
+      labelCol: { span: 6 },
+      wrapperCol: { span: 18 },
     };
     const tailLayout = {
       wrapperCol: { offset: 0, span: 24 },
@@ -146,32 +214,38 @@ export default class IaasOrder extends Component {
         <div className={'search-content'}>
           <Form {...layout} name="search-content" className={'searchForm-content'}>
             <div className={'searchForm-item'}>
-              <Form.Item name="roleName" label="策略名称">
-                <Input />
+              <Form.Item name="orderId" label="订单号">
+                <Input placeholder={"请输入订单号"}/>
               </Form.Item>
             </div>
             <div className={'searchForm-item'}>
-              <Form.Item name="status" label="策略类型">
-                <Select placeholder="Select a option and change input text above" allowClear>
-                  <Option value="success">系统策略</Option>
-                  <Option value="stop">自定义策略</Option>
+              <Form.Item name="tenantAccount" label="租户账号">
+                <Input placeholder={"请输入租户账号"}/>
+              </Form.Item>
+            </div>
+            <div className={'searchForm-item'}>
+              <Form.Item name="productName" label="产品名称">
+                <Select placeholder="请选择" onChange={this.productChange} allowClear>
+                  <Option value="ecs">云服务器ECS</Option>
+                  <Option value="bms">裸金属BMS</Option>
                 </Select>
+              </Form.Item>
+            </div>
+            <div className={'searchForm-item'}>
+              <Form.Item name="orderTime" label="下单时间">
+                <RangePicker picker="month"/>
               </Form.Item>
             </div>
             <div className={'searchForm-operate'}>
               <Form.Item {...tailLayout}>
-                <Button type="primary" htmlType="submit" >查询</Button>
-                <Button type="primary" htmlType="submit">重置</Button>
+                <Button type="primary" htmlType="submit" >搜索</Button>
+                <Button type="primary" htmlType="submit">导出</Button>
               </Form.Item>
             </div>
           </Form>
         </div>
 
         <div className={'table-content'}>
-          <div className={'table-operateBtn-content'}>
-            <Button icon={<SearchOutlined />}>创建角色</Button>
-            <Button icon={<SearchOutlined />}>批量删除</Button>
-          </div>
           <div className={'table-layout'}>
             <SCTable
               isLoading={this.state.tisLoading}
