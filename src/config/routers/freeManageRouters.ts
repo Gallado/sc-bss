@@ -5,7 +5,9 @@ const IaasDetail = React.lazy(() => import('@/pages/FreeManage/OrderManage/IaaS/
 const PaasOrder = React.lazy(() => import('@/pages/FreeManage/OrderManage/PaaS'));
 const SaasOrder = React.lazy(() => import('@/pages/FreeManage/OrderManage/SaaS'));
 const ServiceOrder = React.lazy(() => import('@/pages/FreeManage/OrderManage/ServiceOrder'));
+const EquipmentOrder = React.lazy(() => import('@/pages/FreeManage/OrderManage/EquipmentOrder'));
 const BookKeeping = React.lazy(() => import('@/pages/FreeManage/BookKeeping'));
+
 
 export default [
   {path:'/freeSummary',exact: true, component:FreeSummary},
@@ -14,5 +16,6 @@ export default [
   {path:'/paasOrder',exact: true, component:PaasOrder},
   {path:'/saasOrder',exact: true, component:SaasOrder},
   {path:'serviceOrder',exact: true, component:ServiceOrder},
+  {path:'equipmentOrder',exact: true, component:EquipmentOrder},
   {path:'/bookKeeping',exact: true, component:BookKeeping},
 ];

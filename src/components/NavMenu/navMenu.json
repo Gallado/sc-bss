@@ -31,8 +31,14 @@
       },{
         "children": [],
         "id":"2-4",
-        "key":"/serverOrder",
-        "menuHref": "serverOrder",
+        "key":"/equipmentOrder",
+        "menuHref": "equipmentOrder",
+        "menuName": "设施订单"
+      },{
+        "children": [],
+        "id":"2-5",
+        "key":"/serviceOrder",
+        "menuHref": "serviceOrder",
         "menuName": "服务订单"
       }],
       "id":"2",

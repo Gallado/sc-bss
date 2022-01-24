@@ -15,3 +15,56 @@
     margin-left: auto;
   }
 }
+
+/************************订单管理-公共*******************************/
+
+.iaas-content{
+
+}
+
+.iaas-detail-content{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+  .iaas_detail_main_content{
+    margin:20px;
+    padding:10px;
+    border:1px solid lightgray;
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      li{
+        flex:0.33;
+        min-width: 33%;
+      }
+    }
+  }
+
+  .iaas_detail_second_content{
+    margin:20px;
+    ul{
+      display: flex;
+      margin-bottom: 0;
+      padding-left: 0;
+      li{
+        flex: 0.166;
+        min-width: 16.6%;
+        text-align: center;
+        border-left: 1px solid #313131;
+        border-top: 1px solid #313131;
+        //border-bottom: 1px solid #313131;
+      }
+      li:nth-last-child(1){
+        border-right: 1px solid #313131;
+      }
+    }
+    ul:nth-last-child(1){
+      li{
+        border-bottom: 1px solid #313131;
+      }
+    }
+
+  }
+}
+

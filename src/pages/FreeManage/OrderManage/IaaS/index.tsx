@@ -78,6 +78,8 @@ export default class IaasOrder extends Component {
           value: '5G边缘云',
         },
       ],
+      //filterSearch: true,
+      filterMultiple:false,
       onFilter: (value, record) => record.scType.indexOf(value) === 0,
     },
     {
@@ -198,6 +200,10 @@ export default class IaasOrder extends Component {
     console.log(item)
   };
 
+  onFinish = (value)=>{
+    console.log(value)
+  }
+
 
 
   render() {
@@ -212,7 +218,7 @@ export default class IaasOrder extends Component {
       <div className={styles['iaas-content']}>
         <PageTitle title="IaaS订单" />
         <div className={'search-content'}>
-          <Form {...layout} name="search-content" className={'searchForm-content'}>
+          <Form {...layout} name="search-content" className={'searchForm-content'} onFinish={this.onFinish}>
             <div className={'searchForm-item'}>
               <Form.Item name="orderId" label="订单号">
                 <Input placeholder={"请输入订单号"}/>
@@ -238,7 +244,7 @@ export default class IaasOrder extends Component {
             </div>
             <div className={'searchForm-operate'}>
               <Form.Item {...tailLayout}>
-                <Button type="primary" htmlType="submit" >搜索</Button>
+                <Button type="primary" htmlType="submit">搜索</Button>
                 <Button type="primary" htmlType="submit">导出</Button>
               </Form.Item>
             </div>
