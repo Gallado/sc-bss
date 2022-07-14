@@ -89,13 +89,22 @@ export default class Tenant extends Component {
 
   ];
   query = (pageNum,pageSize) =>{
-
     this.setState({isLoading:true});
     let that = this;
     let params =  {
       index:pageNum == undefined ? 1 :pageNum,
       rows:pageSize == undefined ? 10 :pageSize,
     };
+
+    this.$axios.post('/api/user/login',params, {emulateJSON: true})
+      .then(function (response) {
+        if(response.data.code == 200){
+          that.setState({isLoading:false,tableData:response.data.data,totalSize:22,currentPage:params.index});
+        }else{
+          that.setState({'errorMsg':response.data.message,isLoading:false});
+        }
+      }).catch(function (error) {
+    });
     setTimeout(()=>{
       let data = [{
         "tenantName":"测试租户",
@@ -193,7 +202,7 @@ export default class Tenant extends Component {
           </div>
           <div className={'table-layout'}>
             <SCTable
-              isLoading={this.state.tisLoading}
+              isLoading={this.state.isLoading}
               columns={this.columns}
               dataSource={this.state.tableData}
               tableConfig={this.state.tableConfig}

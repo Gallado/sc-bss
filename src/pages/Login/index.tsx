@@ -29,16 +29,7 @@ export default class Login extends Component {
     let params =  {
         userName:values.username,
         password:md5(values.password),
-        userType:1
     };
-    Store.dispatch({
-      type: 'LOGIN_INFO',
-      loginInfo:{
-        'userName':values.username,
-        'password':values.password,
-      },
-
-    });
     Store.dispatch({
       type: 'ACTIVED_NAVMENU',
       activedNavMenu:{
@@ -47,21 +38,14 @@ export default class Login extends Component {
       },
     });
     history.push({pathname: "/summary"});
-    /*this.$axios.post('/iam/user/login',params, {emulateJSON: true})
+    /*this.$axios.post('/api/user/login',params, {emulateJSON: true})
       .then(function (response) {
         if(response.data.code == 200){
             Store.dispatch({
                 type: 'LOGIN_INFO',
                 loginInfo:response.data.data,
             });
-            Store.dispatch({
-                type: 'USER_INFO',
-                userInfo:{
-                    userName:response.data.data.userName,
-                    //password:values.password
-                },
-            });
-            history.push({pathname: "/sysOverview"});
+            history.push({pathname: "/summary"});
         }else{
             that.setState({'errorMsg':response.data.message});
 

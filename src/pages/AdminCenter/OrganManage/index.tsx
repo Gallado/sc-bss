@@ -140,6 +140,7 @@ export default class OrganManage extends Component {
           email:"43224288@qq.com",
           status:"1",
           createTime:'2021-08-05 10:20:54',
+          children:[]
         }
       ];
       that.setState({isLoading:false,tableData:data,totalSize:22,currentPage:params.index});
